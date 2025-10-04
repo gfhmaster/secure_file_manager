@@ -1,6 +1,6 @@
 name: CI/CD Pipeline
 
-# Запуск workflow при коммитах и pull request в main
+# Запуск workflow при коммитах и pull request в master
 on:
   push:
     branches: [ master ]
@@ -31,4 +31,4 @@ jobs:
     # 4. Запуск тестов
     - name: Run tests
       run: |
-        pytest
+        python3 -m pytest tests/ -v
