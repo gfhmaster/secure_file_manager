@@ -25,5 +25,5 @@ class TestFileManager(unittest.TestCase):
         self.assertIsNone(found)
 
 
-if __name__ == __main__
+if __name__ == "__main__":
     unittest.main()
