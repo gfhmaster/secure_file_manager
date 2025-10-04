@@ -1,4 +1,4 @@
-from src.file_system import User, File, EncryptedFile, ArchiveFile, FileManager
+from classes import User, File, EncryptedFile, ArchiveFile, FileManager
 
 def test_user_creation():
     alice = User("Alice", "hash1")
