@@ -9,7 +9,7 @@ class User:
     Инкапсуляция: пароль и список файлов защищены от прямого доступа.
     """
     def __init__(self, username, password_hash):
-        self.name = username
+        self.username = username
         self._password_hash = password_hash  # защищенный атрибут
         self._files = []  # список файлов пользователя, инкапсулирован
 
