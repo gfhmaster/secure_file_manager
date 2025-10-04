@@ -4,7 +4,7 @@ from models.user import User
 from models.file import File
 
 
-class TestFileManager(unittest.TestCase)
+class TestFileManager(unittest.TestCase):
 
     def setUp(self)
         self.manager = FileManager()
