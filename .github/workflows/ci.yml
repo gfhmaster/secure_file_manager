@@ -3,9 +3,9 @@ name: CI/CD Pipeline
 # Запуск workflow при коммитах и pull request в main
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-test:
