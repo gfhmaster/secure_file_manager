@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 # -------------------------------
 # Класс User
 # -------------------------------
@@ -28,6 +29,7 @@ class User:
             recipient.upload_file(file)
             print(f"{self.username} поделился файлом {file.filename} с {recipient.username}")
 
+
 # -------------------------------
 # Класс File (базовый) и наследники
 # -------------------------------
@@ -46,6 +48,7 @@ class File:
     def info(self):
         return f"Файл: {self.filename}, Владелец: {self.owner.username}, Статус: {self.status}"
 
+
 class EncryptedFile(File):
     """Наследник File: добавляет шифрование."""
     def __init__(self, filename, owner):
@@ -61,6 +64,7 @@ class EncryptedFile(File):
     def info(self):
         return f"Зашифрованный файл: {self.filename}, Владелец: {self.owner.username}"
 
+
 class ArchiveFile(File):
     """Наследник File: архивный файл."""
     def __init__(self, filename, owner):
@@ -70,6 +74,7 @@ class ArchiveFile(File):
 
     def info(self):
         return f"Архивный файл: {self.filename}, Владелец: {self.owner.username}"
+
 
 # -------------------------------
 # Класс FileManager
@@ -93,4 +98,3 @@ class FileManager:
 
     def list_all_files(self):
         return [f.filename for f in self._all_files]
-
